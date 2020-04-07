@@ -61,6 +61,7 @@ class EfficientNetBackbone(Backbone):
                                         '375a35c17ef70d46f9c664b03b4437f2'),
                     'efficientnet-b7': ('e964fd6e26e9a4c144bcb811f2a10f20',
                                         'd55674cc46b805f4382d18bc08ed43c1')
+                        }
 
         model_name = 'efficientnet-b7' #self.backbone[-1]
         file_name = model_name + '_weights_tf_dim_ordering_tf_kernels_autoaugment_notop.h5'
