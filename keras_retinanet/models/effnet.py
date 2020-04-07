@@ -42,8 +42,7 @@ class EfficientNetBackbone(Backbone):
         #from efficientnet.model import WEIGHTS_HASHES
 
         BASE_WEIGHTS_PATH = (
-                    'https://github.com/Callidior/keras-applications/'
-                    'releases/download/efficientnet/')
+                    'https://github.com/Callidior/keras-applications/releases/download/efficientnet/')
         
         WEIGHTS_HASHES = {
                     'efficientnet-b0': ('e9e877068bd0af75e0a36691e03c072c',
@@ -63,7 +62,7 @@ class EfficientNetBackbone(Backbone):
                     'efficientnet-b7': ('e964fd6e26e9a4c144bcb811f2a10f20',
                                         'd55674cc46b805f4382d18bc08ed43c1')
 
-        model_name = 'efficientnet-b' + '7' #self.backbone[-1]
+        model_name = 'efficientnet-b7' #self.backbone[-1]
         file_name = model_name + '_weights_tf_dim_ordering_tf_kernels_autoaugment_notop.h5'
         file_hash = WEIGHTS_HASHES[model_name][1]
         weights_path = get_file(file_name, BASE_WEIGHTS_PATH + file_name, cache_subdir='models', file_hash=file_hash)
