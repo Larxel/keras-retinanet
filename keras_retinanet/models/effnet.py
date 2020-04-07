@@ -63,7 +63,7 @@ class EfficientNetBackbone(Backbone):
                     'efficientnet-b7': ('e964fd6e26e9a4c144bcb811f2a10f20',
                                         'd55674cc46b805f4382d18bc08ed43c1')
 
-        model_name = 'efficientnet-b' + self.backbone[-1]
+        model_name = 'efficientnet-b' + '7' #self.backbone[-1]
         file_name = model_name + '_weights_tf_dim_ordering_tf_kernels_autoaugment_notop.h5'
         file_hash = WEIGHTS_HASHES[model_name][1]
         weights_path = get_file(file_name, BASE_WEIGHTS_PATH + file_name, cache_subdir='models', file_hash=file_hash)
@@ -121,7 +121,7 @@ def effnet_retinanet(num_classes, backbone='EfficientNetB0', inputs=None, modifi
     elif backbone == 'EfficientNetB6':
         model = efn.EfficientNetB6(input_tensor=inputs, include_top=False, weights=None)
     elif backbone == 'EfficientNetB7':
-        model = efn.EfficientNetB7(input_tensor=inputs, include_top=False, weights='noisy-student)
+        model = efn.EfficientNetB7(input_tensor=inputs, include_top=False, weights='noisy-student')
     else:
         raise ValueError('Backbone (\'{}\') is invalid.'.format(backbone))
 
