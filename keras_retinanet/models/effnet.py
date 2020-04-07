@@ -82,8 +82,8 @@ class EfficientNetBackbone(Backbone):
     def preprocess_image(self, inputs):
         """ Takes as input an image and prepares it for being passed through the network.
         """
-        return efn.preprocess_input(inputs)
-
+        #return efn.preprocess_input(inputs)
+        return inputs
 
 def effnet_retinanet(num_classes, backbone='EfficientNetB0', inputs=None, modifier=None, **kwargs):
     """ Constructs a retinanet model using a resnet backbone.
